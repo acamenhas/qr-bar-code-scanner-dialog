@@ -98,9 +98,9 @@ class _ScannerWidgetState extends State<ScannerWidget> {
             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
-                              primary: CColors.secondary,
+                              primary: Color.fromRGBO(59, 89, 153, 1),
                               textStyle: const TextStyle(
-                                  color: CColors.cinzento,
+                                  color: Color.fromRGBO(34, 36, 44, 1),
                                   fontSize: 14,
                                   fontWeight: FontWeight.normal)),
           onPressed: () {
