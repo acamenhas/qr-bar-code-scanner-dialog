@@ -98,7 +98,7 @@ class _ScannerWidgetState extends State<ScannerWidget> {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Text("Stop scanning"),
+          child: const Text("Fechar"),
         ),
       ],
     );
