@@ -40,7 +40,7 @@ class MethodChannelQrBarCodeScannerDialog
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: ScannerWidget(onScanSuccess: (code) {
+                child: ScannerWidget(aux: aux, onScanSuccess: (code) {
                   if (code != null) {
                     Navigator.pop(context);
                     onScanSuccess(code);
@@ -53,6 +53,7 @@ class MethodChannelQrBarCodeScannerDialog
 
 class ScannerWidget extends StatefulWidget {
   final void Function(String? code) onScanSuccess;
+  final String? aux;
 
   const ScannerWidget({super.key, required this.onScanSuccess});
 
@@ -94,10 +95,17 @@ class _ScannerWidgetState extends State<ScannerWidget> {
             child: _buildQrView(context),
           ),
         ),
-          Text("Quantidades Recolhidas:"),
-          Divider(
-            height: 20,
-            thickness: 1),
+        Visibility(
+            visible: aux != "", child:
+            Column(
+                children: [
+                  Text("Quantidades Recolhidas:"),
+                  Divider(
+                    height: 20,
+                    thickness: 1),
+                ]
+            ),
+        ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
