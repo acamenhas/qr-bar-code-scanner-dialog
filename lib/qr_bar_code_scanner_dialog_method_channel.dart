@@ -94,6 +94,10 @@ class _ScannerWidgetState extends State<ScannerWidget> {
             child: _buildQrView(context),
           ),
         ),
+          Text("Quantidades Recolhidas:"),
+          Divider(
+            height: 20,
+            thickness: 1),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
