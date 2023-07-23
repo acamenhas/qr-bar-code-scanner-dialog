@@ -55,7 +55,7 @@ class ScannerWidget extends StatefulWidget {
   final void Function(String? code) onScanSuccess;
   final String? aux;
 
-  const ScannerWidget({super.key, required this.onScanSuccess});
+  const ScannerWidget({super.key, required this.onScanSuccess, this.aux = ""});
 
   @override
   createState() => _ScannerWidgetState();
