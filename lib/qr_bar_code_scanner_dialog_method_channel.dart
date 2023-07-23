@@ -96,7 +96,7 @@ class _ScannerWidgetState extends State<ScannerWidget> {
           ),
         ),
         Visibility(
-            visible: aux != "", child:
+            visible: widget.aux != "", child:
             Column(
                 children: [
                   Text("Quantidades Recolhidas:"),
