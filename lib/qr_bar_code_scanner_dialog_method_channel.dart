@@ -99,7 +99,9 @@ class _ScannerWidgetState extends State<ScannerWidget> {
             visible: widget.aux!.isNotEmpty, child:
             Column(
                 children: [
-                  Text("Quantidades Recolhidas:"),
+                  Text("Resumo das Quantidades Recolhidas:"),
+                  for(var item in widget.aux!)
+                    Text(item.toString());
                   Divider(
                     height: 20,
                     thickness: 1),
