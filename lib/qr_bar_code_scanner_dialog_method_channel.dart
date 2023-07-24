@@ -102,7 +102,7 @@ class _ScannerWidgetState extends State<ScannerWidget> {
                 Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(bottom:4.0), child:
+                        padding: const EdgeInsets.only(bottom:10.0), child:
                           Text("Resumo das quantidades recolhidas:")),
                       for(var item in widget.aux!)
                         Text(item.toString()),
