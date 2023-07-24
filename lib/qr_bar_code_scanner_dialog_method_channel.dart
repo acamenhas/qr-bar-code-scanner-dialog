@@ -97,16 +97,19 @@ class _ScannerWidgetState extends State<ScannerWidget> {
         ),
         Visibility(
             visible: widget.aux!.isNotEmpty, child:
-            Column(
-                children: [
-                  Text("Resumo das Quantidades Recolhidas:"),
-                  for(var item in widget.aux!)
-                    Text(item.toString()),
-                  Divider(
-                    height: 20,
-                    thickness: 1),
-                ]
-            ),
+            Padding(
+                padding: const EdgeInsets.all(8.0), child:
+                Column(
+                    children: [
+                      Text("Resumo das Quantidades Recolhidas:"),
+                      for(var item in widget.aux!)
+                        Text(item.toString()),
+                      Divider(
+                        height: 20,
+                        thickness: 1),
+                    ]
+                ),
+            )
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
