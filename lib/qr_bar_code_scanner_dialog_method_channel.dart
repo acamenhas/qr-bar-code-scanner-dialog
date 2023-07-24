@@ -101,7 +101,7 @@ class _ScannerWidgetState extends State<ScannerWidget> {
                 children: [
                   Text("Resumo das Quantidades Recolhidas:"),
                   for(var item in widget.aux!)
-                    Text(item.toString());
+                    Text(item.toString()),
                   Divider(
                     height: 20,
                     thickness: 1),
