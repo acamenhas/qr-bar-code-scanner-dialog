@@ -23,7 +23,7 @@ class MethodChannelQrBarCodeScannerDialog
 
   @override
   void scanBarOrQrCode(
-      {BuildContext? context, required Function(String? code) onScanSuccess, String? aux}) {
+      {BuildContext? context, required Function(String? code) onScanSuccess, List<String>? aux}) {
     /// context is required to show alert in non-web platforms
     assert(context != null);
 
@@ -53,7 +53,7 @@ class MethodChannelQrBarCodeScannerDialog
 
 class ScannerWidget extends StatefulWidget {
   final void Function(String? code) onScanSuccess;
-  final String? aux;
+  final List<String>? aux;
 
   const ScannerWidget({super.key, required this.onScanSuccess, this.aux = ""});
 
@@ -96,7 +96,7 @@ class _ScannerWidgetState extends State<ScannerWidget> {
           ),
         ),
         Visibility(
-            visible: widget.aux != "", child:
+            visible: widget.aux.isNotEmpty, child:
             Column(
                 children: [
                   Text("Quantidades Recolhidas:"),
