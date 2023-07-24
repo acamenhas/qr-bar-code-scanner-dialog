@@ -104,12 +104,14 @@ class _ScannerWidgetState extends State<ScannerWidget> {
                       Text("Resumo das Quantidades Recolhidas:"),
                       for(var item in widget.aux!)
                         Text(item.toString()),
-                      Divider(
-                        height: 20,
-                        thickness: 1),
                     ]
                 ),
             )
+        ),
+
+        Visibility(
+            visible: widget.aux!.isNotEmpty, child:
+                Divider(height: 20,thickness: 1),
         ),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
